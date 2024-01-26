@@ -48,7 +48,7 @@ figure {
 
 .heading {
   text-align: center;
-  font-family: var(--accent-font, Arial, sans-serif);
+  font-family: var(--accent-font, Cambria, serif);
   line-height: 90%;
   font-weight: 600;
 }
@@ -73,6 +73,7 @@ figure {
   align-items: center;
   flex-direction: row;
   gap: 20px;
+  padding: 0;
   list-style: none;
 }
 
@@ -162,7 +163,14 @@ figure {
 .content__list {
   position: relative;
   list-style: none;
-  margin-inline-start: 40px;
+  padding: 0;
+  margin-inline-start: 16px;
+}
+
+.content__list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .content__list li:not(:last-child) {
@@ -170,28 +178,22 @@ figure {
 }
 
 .content__list li::before {
-  position: absolute;
-  margin-inline-start: -26px;
-  margin-top: 2px;
   content: "";
+  padding-right: 15px;
   width: 15px;
   height: 15px;
   background-image: url(../images/marker-light.svg);
-  background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
 .theme_dark .content__list li::before {
-  position: absolute;
-  margin-inline-start: -26px;
-  margin-top: 2px;
   content: "";
+  padding-right: 15px;
   width: 15px;
   height: 15px;
   background-image: url(../images/marker-dark.svg);
-  background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -252,7 +254,7 @@ figure {
   font-size: 60px;
   line-height: 90%;
   font-weight: 600;
-  font-family: var(--accent-font, Arial, sans-serif);
+  font-family: var(--accent-font, Cambria, serif);
   hyphens: manual;
 }
 
